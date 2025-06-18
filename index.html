@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pneumonia Classification</title>
+    <style>
+        html, body {
+            height: 100%; 
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            background-image: url('static/img.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            max-width: 1000px;
+            background-color:navajowhite;
+            max-width: 800px; /* Increased width */
+            height: 500px; 
+            padding: 40px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: center;
+        }
+        h1 {
+            margin-top: 0;
+            color: blue;
+            font-weight: bold;
+        }
+        input[type="file"] {
+            display: block;
+            margin: 40px auto;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: black;
+            font-size: 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <br>
+    <br>
+    <br>
+    <h1>Pneumonia Classification</h1>
+    <br>
+    <br>
+    <p>Upload a chest X-ray image to classify it as either "Normal" or "Pneumonia".</p>
+    <form action="/predict" method="POST" enctype="multipart/form-data">
+        <br>
+        <input type="file" name="file" accept="image/*" required>
+        <button type="submit">Classify Image</button>
+    </form>
+</div>
+
+</body>
+</html>
